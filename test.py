@@ -17,4 +17,8 @@ def count_from_one(x):
 
     return count(1)
 
+def count_down(x):
+    if x == 0:
+        return [0]
+    return [x] + count_down(x - 1)
 
