@@ -22,3 +22,12 @@ def count_down(x):
         return [0]
     return [x] + count_down(x - 1)
 
+def count_up(x):
+    if x == 0:
+        return []
+    else:
+        count_arr = count_up(x - 1)
+        print(count_arr)
+        count_arr.append(x)
+    return count_arr
+print(count_up(4))
