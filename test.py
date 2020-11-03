@@ -31,3 +31,4 @@ def count_up(x):
         count_arr.append(x)
     return count_arr
 print(count_up(4))
+print("Hello world")
