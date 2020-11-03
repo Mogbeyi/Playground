@@ -30,6 +30,6 @@ def count_up(x):
         count_arr.append(x)
     return count_arr
 
-print(count_down(4))
+print(count_down(14))
 print(count_up(4))
 print("Hello world")
