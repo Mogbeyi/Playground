@@ -24,10 +24,11 @@ def count_down(x):
 
 def count_up(x):
     if x == 0:
-        return []
+        return [0]
     else:
         count_arr = count_up(x - 1)
-        print(count_arr)
         count_arr.append(x)
     return count_arr
+
+print(count_down(4))
 print(count_up(4))
