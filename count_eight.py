@@ -1,3 +1,4 @@
+#count the number of times 8 occurs in an integer
 def count_eight(x):
     if x % 10 == 8:
         return 1 + count_eight(x // 10)
