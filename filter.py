@@ -1,5 +1,5 @@
 #Iterative implementation of filter
-def filter(f, arr):
+def iterative_filter(f, arr):
     if not arr:
         return []
 
@@ -11,6 +11,19 @@ def filter(f, arr):
 
     return filter_result
 
-even = lambda x: x % 2 == 0
+#Recursive implementation of filter
+def recursive_filter(f, arr):
+    if not arr:
+        return []
+    elif f(arr[0]):
+        return [arr[0]] + recursive_filter(f, arr[1:])
+    else:
+        return recursive_filter(f, arr[1:])
 
-print(filter(even, [1,2,3,4,5,6,7,8,9]))
+def test():
+    even = lambda x: x % 2 == 0
+
+    print(iterative_filter(even, [1,2,3,4,5,6,7,8,9]))
+    print(recursive_filter(even, [1,2,3,4,5,6,7,8,9]))
+
+test()
