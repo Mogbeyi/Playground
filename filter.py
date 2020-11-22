@@ -2,14 +2,8 @@
 def iterative_filter(f, arr):
     if not arr:
         return []
-
-    filter_result = []
-
-    for elem in arr:
-        if f(elem):
-            filter_result.append(elem)
-
-    return filter_result
+    
+    return [elem for elem in arr if f(elem)]
 
 #Recursive implementation of filter
 def recursive_filter(f, arr):
