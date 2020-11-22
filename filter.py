@@ -17,7 +17,7 @@ def recursive_filter(f, arr):
 def test():
     even = lambda x: x % 2 == 0
 
-    print(iterative_filter(even, [1,2,3,4,5,6,7,8,9]))
-    print(recursive_filter(even, [1,2,3,4,5,6,7,8,9]))
+    assert iterative_filter(even, [1,2,3,4,5,6,7,8,9]) == [2,4,6,8]
+    assert recursive_filter(even, [1,2,3,4,5,6,7,8,9]) == [2,4,6,8]
 
 test()
