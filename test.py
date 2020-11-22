@@ -32,4 +32,3 @@ def count_up(x):
 
 print(count_down(14))
 print(count_up(4))
-print("Hello world")
