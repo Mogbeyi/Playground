@@ -19,9 +19,23 @@ def count_up_two(start, end):
 
     return count_up_tail_recursive(start, end, [])
 
+# Curried Implementation
+def count_up_to(end):
+
+    def start_value(start):
+        result = []
+
+        for num in range(start, end + 1):
+            result.append(num)
+
+        return result
+    
+    return start_value
+
 def test():
 
     assert(count_up(1, 7)) == [1,2,3,4,5,6,7]
     assert(count_up_two(1, 7)) == [1,2,3,4,5,6,7]
+    assert(count_up_to(7)(3)) == [3,4,5,6,7]
 
 test()
