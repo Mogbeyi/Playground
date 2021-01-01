@@ -1,4 +1,4 @@
-def improve(update, close, guess=1):
+def improve(update, close, guess=19):
     while not close(guess):
         guess = update(guess)
     return guess
@@ -15,4 +15,4 @@ def square_close_to_successor(guess):
 def approx_eq(x, y, tolerance=1e-15):
     return abs(x - y) < tolerance
 
-improve(golden_update, square_close_to_successor)
+print(improve(golden_update, square_close_to_successor))
