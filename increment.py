@@ -1,6 +1,8 @@
 def action(fn, x):
     return fn(x)
 
-print(action(lambda x: x + 1, 42))
-print(action(lambda x: x * x, 8))
+inc = lambda x: x + 1
+square = lambda x: x * x
 
+print(action(inc, 42))
+print(action(square, 8))
