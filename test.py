@@ -9,6 +9,6 @@ class State:
     def decrease(self):
         return self.value - 1
 
-a = State(4)
+a = State(5)
 print(a.value)
 print(a.increase())
