@@ -1,14 +1,9 @@
-class State:
+def square(x=4):
+    return x * x
 
-    def __init__(self, value):
-        self.value = value
+def main():
+    print(square(5))
+    print(square())
 
-    def increase(self):
-        return self.value + 1
+main()
 
-    def decrease(self):
-        return self.value - 1
-
-a = State(5)
-print(a.value)
-print(a.increase())
