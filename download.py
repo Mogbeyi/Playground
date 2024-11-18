@@ -18,7 +18,7 @@ def main(url, download_folder):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     
-    # You need to inspect the webpage to find the common pattern for audio files
+    # Inspect the webpage to find the common pattern for audio files
     # This example assumes they are contained in <a> tags with a specific class or property
     audio_links = soup.find_all('a', href=True)  # Adjust this line based on the actual pattern
 
@@ -30,7 +30,7 @@ def main(url, download_folder):
             print(f'Finished downloading {href}')
 
 if __name__ == '__main__':
-    url = 'https://www.livingwordmedia.org/teachings/the-law-in-genesis-series-9a/'
+    url = "https://www.livingwordmedia.org/teachings/school-of-ministry-power-city-intl-conversations-around-the-gospel/"
     download_folder = '/Users/emmywonder/Downloads'  # Change this to your desired folder
     main(url, download_folder)
 
